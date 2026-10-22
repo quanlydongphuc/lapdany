@@ -4,5 +4,11 @@
     "api/*.mjs": {
       "maxDuration": 180
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/handler?path=:path*"
+    }
+  ]
 }
