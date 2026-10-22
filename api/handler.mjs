@@ -5,7 +5,7 @@ export default {
     const url = new URL(request.url)
     const rewrittenPath = url.searchParams.get('path')
     const pathname = rewrittenPath
-      ? `/api/${rewrittenPath.replace(/^\\/+/, '')}`
+      ? `/api/${rewrittenPath.split('/').filter(Boolean).join('/')}`
       : url.pathname
     const chunks = Buffer.from(await request.arrayBuffer())
     const req = {
