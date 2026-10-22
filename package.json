@@ -1,0 +1,23 @@
+{
+  "name": "error-map-prototype",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env.local server.mjs",
+    "build": "vite build",
+    "preview": "NODE_ENV=production node --env-file-if-exists=.env.local server.mjs",
+    "local-https:setup": "bash scripts/setup-local-https.sh"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^4.0.91",
+    "@vercel/blob": "^2.8.2",
+    "@vitejs/plugin-react": "latest",
+    "ai": "^7.0.136",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest",
+    "zod": "^4.6.5"
+  }
+}
